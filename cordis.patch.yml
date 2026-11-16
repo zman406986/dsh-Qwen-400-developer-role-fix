@@ -1,0 +1,23 @@
+# Bundle patch for dsh-qwen-400-developer-role-fix.
+#
+# `dsh plugin --profile <name> add ...` inserts this row automatically because
+# package.json declares `dsh.bundle.patch`. Override any value in your own
+# profile's cordis.patch.yml by targeting the row id, for example:
+#
+#   - id: qwen-developer-role-fix
+#     config:
+#       models: [qwen4-max-preview]
+#       logPath: "~/.dsh/qwen-role-fix.log"
+#
+- insert:
+    - id: qwen-developer-role-fix
+      name: dsh-qwen-400-developer-role-fix
+      inject: [llm]
+      config:
+        # Empty = auto-detect from the model id. Set exact model ids to
+        # override auto-detection, including opaque custom routes.
+        models: []
+        # Optional JSONL probe log. Empty = off.
+        logPath: ""
+        # Also emit probe lines through the DSH logger.
+        debug: false

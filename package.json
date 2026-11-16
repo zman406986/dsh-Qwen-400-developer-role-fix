@@ -1,0 +1,45 @@
+{
+  "name": "dsh-qwen-400-developer-role-fix",
+  "version": "1.1.1",
+  "description": "DSH plugin that stops Qwen/DashScope requests from failing with HTTP 400 over OpenAI's 'developer' role.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "scripts/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check index.js",
+    "verify:wire": "node scripts/verify-wire.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "qwen",
+    "dashscope",
+    "developer-role",
+    "pi-ai"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zman406986/dsh-Qwen-400-developer-role-fix.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zman406986/dsh-Qwen-400-developer-role-fix/issues"
+  },
+  "homepage": "https://github.com/zman406986/dsh-Qwen-400-developer-role-fix#readme",
+  "author": "zman406986",
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
