@@ -28,10 +28,7 @@ For an opaque model id, set `models: [your-model-id]`.
 
 ## Install
 
-The repository is private; authenticate Git/GitHub first.
-
 ```sh
-gh auth setup-git
 dsh plugin --profile multitask add github:zman406986/dsh-Qwen-400-developer-role-fix
 ```
 
